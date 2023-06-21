@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demoooooo hola',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,25 +30,12 @@ class MyApp extends StatelessWidget {
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
         // Este es el tema de su aplicación.
-        //
-        // PRUEBA ESTO: Intenta ejecutar tu aplicación con "flutter run". Verás que
-        // que la aplicación tiene una barra de herramientas azul. Luego, sin salir de la aplicación,
-        // intenta cambiar el seedColor en el colorScheme de abajo a Colors.green
-        // y luego invoque la "recarga en caliente" (guarde los cambios o pulse el botón "hot
-        // recarga en caliente" en un IDE compatible con Flutter, o pulse "r" si utilizó
-        // la línea de comandos para iniciar la aplicación).
-        //
-        // Observa que el contador no se ha puesto a cero; el estado de la aplicación
-        // estado de la aplicación no se pierde durante la recarga. Para reiniciar el estado, usa hot
-        // reinicio en caliente.
-        //
-        // Esto funciona también para el código, no sólo para los valores: La mayoría de los cambios de código pueden ser
-        // probarse con una recarga en caliente.
+
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Contador'),
     );
   }
 }
@@ -122,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Usted ha presionado el botón tantas veces:',
             ),
             Text(
               '$_counter',
